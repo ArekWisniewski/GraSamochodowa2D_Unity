@@ -5,6 +5,7 @@ public class CarSpawn : MonoBehaviour {
 
     public float carSpawnDelay = 1f;
     public GameObject Civil;
+    public int pointsPerCivilCar;
 
     private float[] lanesArray;
 
@@ -38,10 +39,13 @@ public class CarSpawn : MonoBehaviour {
             GameObject car = (GameObject)Instantiate(Civil, new Vector3(lanesArray[lane], 6f, 0), Quaternion.Euler(new Vector3(0, 0, 180)));
             car.GetComponent<CivilCar>().direction = 1;
             car.GetComponent<CivilCar>().civilCarSpeed = 12f;
+            car.GetComponent<CivilCar>().pointsPerCar = pointsPerCivilCar;
+            
         }
         if (lane == 2 || lane == 3)
         {
-            Instantiate(Civil, new Vector3(lanesArray[lane], 6f, 0), Quaternion.identity);
+            GameObject car = (GameObject)Instantiate(Civil, new Vector3(lanesArray[lane], 6f, 0), Quaternion.identity);
+            car.GetComponent<CivilCar>().pointsPerCar = pointsPerCivilCar;
         }
     }
 

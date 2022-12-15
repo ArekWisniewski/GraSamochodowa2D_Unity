@@ -6,6 +6,8 @@ public class CivilCar : MonoBehaviour {
     public float crashDamage = 20f;
     public float civilCarSpeed = 5f;
     public int direction = -1;
+    public int pointsPerCar;
+    
 
     private Vector3 civilCarPosition;
 
@@ -30,6 +32,7 @@ public class CivilCar : MonoBehaviour {
         } else if (obj.gameObject.tag == "UsuwaniePojazdow")
         {
             Destroy(this.gameObject);
+            PointsManager.points += pointsPerCar;
         } 
         
     }
