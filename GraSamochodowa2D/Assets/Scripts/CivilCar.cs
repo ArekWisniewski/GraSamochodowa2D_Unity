@@ -8,6 +8,7 @@ public class CivilCar : MonoBehaviour {
     public int direction = -1;
     public int pointsPerCar;
     
+  
 
     private Vector3 civilCarPosition;
 
@@ -26,7 +27,7 @@ public class CivilCar : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D obj)
     {
         if(obj.gameObject.tag == "Player")
-        {
+        {  
             obj.gameObject.GetComponent<CarMovement>().durability -= crashDamage;
             Destroy(this.gameObject);
         } else if (obj.gameObject.tag == "UsuwaniePojazdow")

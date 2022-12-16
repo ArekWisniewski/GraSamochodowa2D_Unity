@@ -200,5 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f495bbb7d872234088031145cdc9dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crashDamage: 20
   civilCarSpeed: 5
   direction: -1
+  pointsPerCar: 0

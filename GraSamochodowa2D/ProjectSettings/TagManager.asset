@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - UsuwaniePojazdow
+  - Untouchable
+  - CollisionTag
   layers:
   - Default
   - TransparentFX
@@ -38,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Points
+    uniqueID: 3029353181
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
