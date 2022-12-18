@@ -5,12 +5,6 @@ using System.Collections;
 
 public class EndGame : MonoBehaviour {
 
-    public Text gainedPointsText;
-	void Start () 
-    {
-        gainedPointsText.text = PointsManager.points.ToString();
-    }
-
     public void RetryButton()
     {
         Time.timeScale = 1;
