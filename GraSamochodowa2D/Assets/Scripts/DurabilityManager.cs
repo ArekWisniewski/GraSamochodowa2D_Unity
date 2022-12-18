@@ -8,6 +8,7 @@ public class DurabilityManager : MonoBehaviour{
     public GameObject Spawn;
     public TextMesh durabilityText;
     public int lifes;
+    public GameObject EndGameScreen;
     private GameObject Player;
 
     void Start()
@@ -23,6 +24,10 @@ public class DurabilityManager : MonoBehaviour{
             if(lifes > 0)
             {
                 StartCoroutine("SpawnCar");
+            } else if(lifes <= 0)
+            {
+                Time.timeScale = 0;
+                EndGameScreen.SetActive(true);
             }
         } else if (Player.GetComponent<CarMovement>().durability > Player.GetComponent<CarMovement>().maxDurability)
         {
