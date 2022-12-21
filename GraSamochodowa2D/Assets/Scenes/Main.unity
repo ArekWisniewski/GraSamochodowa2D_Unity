@@ -2279,7 +2279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5969fbf276318a4a81f6f02f02ab71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSpawnDelay: 0.8
+  carSpawnDelay: 0.7
   Civil: {fileID: 7342344879519805874, guid: 8590afe9ab3d399449397eb6125bb7af, type: 3}
   pointsPerCivilCar: 10
 --- !u!114 &1733504029

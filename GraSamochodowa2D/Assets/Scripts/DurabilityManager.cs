@@ -29,10 +29,7 @@ public class DurabilityManager : MonoBehaviour{
                 Time.timeScale = 0;
                 EndGameScreen.SetActive(true);
             }
-        } else if (Player.GetComponent<CarMovement>().durability > Player.GetComponent<CarMovement>().maxDurability)
-        {
-            Player.GetComponent<CarMovement>().durability = Player.GetComponent<CarMovement>().maxDurability;
-        }
+        } 
 
         durabilityText.text = "Durability: " + Player.GetComponent<CarMovement>().durability + "/" + Player.GetComponent<CarMovement>().maxDurability;
 
@@ -44,7 +41,7 @@ public class DurabilityManager : MonoBehaviour{
         Player.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.4f);
         Player.GetComponent<BoxCollider2D>().isTrigger = true;
         Player.tag = "Untouchable";
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         Player.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         Player.GetComponent<BoxCollider2D>().isTrigger = false;
         Player.tag = "Player";
